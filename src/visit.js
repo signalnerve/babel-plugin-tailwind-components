@@ -30,7 +30,7 @@ export default function visit({
   const str =
     path.node.type === 'StringLiteral'
       ? path.node.value
-      : path.node.quasi.quasis[0].value.cooked
+      : path.node.quasis[0].value.cooked
   const classNames = str.match(/\S+/g) || []
 
   let config
